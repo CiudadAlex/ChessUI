@@ -66,27 +66,9 @@ public class BoardView extends VerticalLayout {
     private void repaintGridBoard() {
 
         this.vertBoard.removeAll();
-        this.vertBoard.setSpacing(false);
 
-        final int sideCasilla = StyleUtils.getSideCasilla();
-
-        for (int row = 7; row >= 0; row--) {
-
-            final HorizontalLayout horizBoard = new HorizontalLayout();
-            horizBoard.setSpacing(false);
-
-            for (int col = 0; col < 8; col++) {
-
-                final Casilla casilla = this.tablero.getCasilla(col, row);
-                final TipoCasilla tipoCasilla = casilla.getTipoCasilla();
-                final Ficha ficha = casilla.getFicha();
-
-                final Component casillaTablero = new CasillaComponent(col, row, tipoCasilla, ficha, sideCasilla, false, this::onSelect);
-                horizBoard.add(casillaTablero);
-            }
-
-            this.vertBoard.add(horizBoard);
-        }
+        TableroComponent tableroComponent = new TableroComponent(this.tablero, this::onSelect);
+        this.vertBoard.add(tableroComponent);
     }
 
     private Void onSelect(final CasillaComponent casillaComponent) {

@@ -3,6 +3,7 @@ package org.leviatan.chess.ui.app;
 import java.util.function.Function;
 
 import com.vaadin.flow.component.Unit;
+import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import org.leviatan.chess.board.Ficha;
@@ -16,6 +17,7 @@ import org.leviatan.chess.ui.framework.utils.images.ImageLoader;
  * @author Alejandro
  *
  */
+@CssImport("./app.css")
 public class CasillaComponent extends VerticalLayout {
 
     private static final long serialVersionUID = -290883705602195216L;
@@ -88,7 +90,7 @@ public class CasillaComponent extends VerticalLayout {
             styleName = styleName + "-selected";
         }
 
-        casillaTablero.getStyle().set("style", styleName);
+        casillaTablero.getClassNames().add(styleName);
 
         removeAll();
         add(casillaTablero);

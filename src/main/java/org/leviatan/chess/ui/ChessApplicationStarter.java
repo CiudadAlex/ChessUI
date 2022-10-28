@@ -11,6 +11,6 @@ public class ChessApplicationStarter {
     }
 }
 
-// FIXME - - - - casillas mas pequeñas (centralizado)
+// FIXME - - - - casillas e imagenes mas pequeñas
 // FIXME - - - - probar reinforcement learning con solo 2 pasos
-// FIXME - - - - enganchar con CSS para que aplique el estilo de las casillas
+

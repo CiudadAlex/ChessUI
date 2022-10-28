@@ -54,7 +54,6 @@ public final class ImageLoader {
     }
 
     private static Image cargaImagen(final String path) {
-
         return new Image(path, "");
     }
 

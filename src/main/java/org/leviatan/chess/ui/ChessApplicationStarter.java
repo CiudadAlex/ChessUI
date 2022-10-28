@@ -10,3 +10,7 @@ public class ChessApplicationStarter {
         System.out.println("Start with >>>>>>>>>>>>>>>>>>>    http://127.0.0.1:8080/board");
     }
 }
+
+// FIXME - - - - casillas mas pequeñas (centralizado)
+// FIXME - - - - probar reinforcement learning con solo 2 pasos
+// FIXME - - - - enganchar con CSS para que aplique el estilo de las casillas

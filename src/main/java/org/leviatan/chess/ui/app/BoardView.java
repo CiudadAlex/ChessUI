@@ -66,12 +66,14 @@ public class BoardView extends VerticalLayout {
     private void repaintGridBoard() {
 
         this.vertBoard.removeAll();
+        this.vertBoard.setSpacing(false);
 
         final int sideCasilla = StyleUtils.getSideCasilla();
 
         for (int row = 7; row >= 0; row--) {
 
             final HorizontalLayout horizBoard = new HorizontalLayout();
+            horizBoard.setSpacing(false);
 
             for (int col = 0; col < 8; col++) {
 

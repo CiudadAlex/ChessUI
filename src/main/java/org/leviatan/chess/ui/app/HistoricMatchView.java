@@ -66,6 +66,7 @@ public class HistoricMatchView extends VerticalLayout {
     private void repaintGridBoard() {
 
         this.vertBoard.removeAll();
+        this.vertBoard.setSpacing(false);
 
         final Function<CasillaComponent, Void> onSelect = cc -> null;
 
@@ -74,6 +75,7 @@ public class HistoricMatchView extends VerticalLayout {
         for (int row = 7; row >= 0; row--) {
 
             final HorizontalLayout horizBoard = new HorizontalLayout();
+            horizBoard.setSpacing(false);
 
             for (int col = 0; col < 8; col++) {
 

@@ -9,7 +9,6 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.page.Page;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import org.leviatan.chess.board.Casilla;
@@ -19,6 +18,7 @@ import org.leviatan.chess.board.Tablero;
 import org.leviatan.chess.board.TipoCasilla;
 import org.leviatan.chess.data.pgn.PGNReaderManager;
 import org.leviatan.chess.data.pgn.Partida;
+import org.leviatan.chess.ui.framework.utils.StyleUtils;
 
 
 /**
@@ -69,9 +69,7 @@ public class HistoricMatchView extends VerticalLayout {
 
         final Function<CasillaComponent, Void> onSelect = cc -> null;
 
-        int windowHeight = 700;
-        final int side = (int) (windowHeight * 0.95);
-        final int sideCasilla = side / 8;
+        final int sideCasilla = StyleUtils.getSideCasilla();
 
         for (int row = 7; row >= 0; row--) {
 

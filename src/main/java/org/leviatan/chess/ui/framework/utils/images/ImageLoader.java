@@ -1,4 +1,4 @@
-package org.leviatan.chess.ui.images;
+package org.leviatan.chess.ui.framework.utils.images;
 
 import com.vaadin.flow.component.html.Image;
 import org.leviatan.chess.board.Bando;

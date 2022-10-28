@@ -1,4 +1,4 @@
-package org.leviatan.chess.ui.images;
+package org.leviatan.chess.ui.framework.utils.images;
 
 /**
  * FinPartida.

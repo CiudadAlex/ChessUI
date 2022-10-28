@@ -8,7 +8,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import org.leviatan.chess.board.Ficha;
 import org.leviatan.chess.board.PosicionTablero;
 import org.leviatan.chess.board.TipoCasilla;
-import org.leviatan.chess.ui.images.ImageLoader;
+import org.leviatan.chess.ui.framework.utils.images.ImageLoader;
 
 /**
  * CasillaComponent.

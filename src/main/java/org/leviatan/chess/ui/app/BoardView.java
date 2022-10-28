@@ -23,6 +23,7 @@ import org.leviatan.chess.engine.intel.deeplearning.CPUPlayerDeepLearningImpl;
 import org.leviatan.chess.engine.intel.generadorarbol.HelperMovimientosPosibles;
 import org.leviatan.chess.ui.UserIntefaceInteractor;
 import org.leviatan.chess.ui.framework.constantes.InteligenciaCPU;
+import org.leviatan.chess.ui.framework.utils.StyleUtils;
 
 
 /**
@@ -66,9 +67,7 @@ public class BoardView extends VerticalLayout {
 
         this.vertBoard.removeAll();
 
-        int windowHeight = 700;
-        final int side = (int) (windowHeight * 0.95);
-        final int sideCasilla = side / 8;
+        final int sideCasilla = StyleUtils.getSideCasilla();
 
         for (int row = 7; row >= 0; row--) {
 

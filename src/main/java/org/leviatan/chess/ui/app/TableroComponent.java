@@ -16,6 +16,7 @@ public class TableroComponent extends VerticalLayout {
     public TableroComponent(Tablero tablero, final Function<CasillaComponent, Void> onSelect) {
 
         this.setSpacing(false);
+        this.setMargin(false);
 
         final int sideCasilla = StyleUtils.getSideCasilla();
 
@@ -23,6 +24,7 @@ public class TableroComponent extends VerticalLayout {
 
             final HorizontalLayout horizBoard = new HorizontalLayout();
             horizBoard.setSpacing(false);
+            horizBoard.setMargin(false);
 
             for (int col = 0; col < 8; col++) {
 

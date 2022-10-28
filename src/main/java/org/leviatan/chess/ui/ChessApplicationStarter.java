@@ -11,6 +11,6 @@ public class ChessApplicationStarter {
     }
 }
 
-// FIXME - - - - casillas e imagenes mas pequeñas
+// FIXME - - - - resolver el problema del estilo al seleccionar casilla
 // FIXME - - - - probar reinforcement learning con solo 2 pasos
 

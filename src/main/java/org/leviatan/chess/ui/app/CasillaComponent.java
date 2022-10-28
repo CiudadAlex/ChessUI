@@ -60,22 +60,28 @@ public class CasillaComponent extends VerticalLayout {
         this.selected = selected;
         this.onSelect = onSelect;
 
+        setSpacing(false);
+        setMargin(false);
         repaint();
     }
 
     private void repaint() {
 
-        final VerticalLayout casillaTablero = new VerticalLayout();
+        removeAll();
 
-        casillaTablero.addClickListener(e -> CasillaComponent.this.onSelect.apply(CasillaComponent.this));
+        addClickListener(e -> CasillaComponent.this.onSelect.apply(CasillaComponent.this));
 
-        casillaTablero.setWidth(this.sideCasilla, Unit.PIXELS);
-        casillaTablero.setHeight(this.sideCasilla, Unit.PIXELS);
+        setWidth(this.sideCasilla, Unit.PIXELS);
+        setHeight(this.sideCasilla, Unit.PIXELS);
+
+        float factorReductionImage = 0.7f;
 
         if (this.ficha != null) {
 
             final Image imagenFicha = ImageLoader.getImage(this.ficha);
-            casillaTablero.add(imagenFicha);
+            imagenFicha.setWidth(factorReductionImage * this.sideCasilla, Unit.PIXELS);
+            imagenFicha.setHeight(factorReductionImage * this.sideCasilla, Unit.PIXELS);
+            add(imagenFicha);
         }
 
         String styleName;
@@ -90,10 +96,7 @@ public class CasillaComponent extends VerticalLayout {
             styleName = styleName + "-selected";
         }
 
-        casillaTablero.getClassNames().add(styleName);
-
-        removeAll();
-        add(casillaTablero);
+        getClassNames().add(styleName);
     }
 
     /**

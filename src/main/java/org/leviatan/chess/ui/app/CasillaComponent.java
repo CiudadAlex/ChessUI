@@ -96,6 +96,7 @@ public class CasillaComponent extends VerticalLayout {
             styleName = styleName + "-selected";
         }
 
+        getClassNames().clear();
         getClassNames().add(styleName);
     }
 

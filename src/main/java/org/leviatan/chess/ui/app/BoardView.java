@@ -3,27 +3,23 @@ package org.leviatan.chess.ui.app;
 import java.util.List;
 
 import com.vaadin.flow.component.Component;
-import com.vaadin.flow.component.HasValue;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.page.Page;
 import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
 import com.vaadin.flow.router.Route;
 import org.leviatan.chess.board.Bando;
-import org.leviatan.chess.board.Casilla;
 import org.leviatan.chess.board.Ficha;
 import org.leviatan.chess.board.Movimiento;
 import org.leviatan.chess.board.Tablero;
-import org.leviatan.chess.board.TipoCasilla;
 import org.leviatan.chess.engine.CPUPlayer;
 import org.leviatan.chess.engine.CPUPlayerHeuristicDecisionTreeImpl;
 import org.leviatan.chess.engine.intel.deeplearning.CPUPlayerDeepLearningImpl;
 import org.leviatan.chess.engine.intel.generadorarbol.HelperMovimientosPosibles;
+import org.leviatan.chess.engine.intel.reinforcementlearning.CPUPlayerReinforcementLearningImpl;
 import org.leviatan.chess.ui.UserIntefaceInteractor;
 import org.leviatan.chess.ui.framework.constantes.InteligenciaCPU;
-import org.leviatan.chess.ui.framework.utils.StyleUtils;
 
 
 /**
@@ -137,6 +133,9 @@ public class BoardView extends VerticalLayout {
 
             } else if (InteligenciaCPU.DEEP_LEARNING_MODEL.equals(inteligenciaCPU)) {
                 cpuPlayer = new CPUPlayerDeepLearningImpl();
+
+            } else if (InteligenciaCPU.REINFORCEMENT_LEARNING_MODEL.equals(inteligenciaCPU)) {
+                cpuPlayer = new CPUPlayerReinforcementLearningImpl();
             }
 
             this.tablero = cpuPlayer.realizarJugadaCPU(this.tablero, this.userIntefaceInteractor, bandoCPU);
@@ -163,7 +162,8 @@ public class BoardView extends VerticalLayout {
         this.radioGroupBando.setValue(Bando.BLANCO.name());
         this.radioGroupBando.addValueChangeListener(e -> moverCPU());
 
-        this.radioGroupInteligencia.setItems(InteligenciaCPU.DECISSION_TREE_HEURISTIC.name(), InteligenciaCPU.DEEP_LEARNING_MODEL.name());
+        this.radioGroupInteligencia.setItems(InteligenciaCPU.DECISSION_TREE_HEURISTIC.name(), InteligenciaCPU.DEEP_LEARNING_MODEL.name(),
+                InteligenciaCPU.REINFORCEMENT_LEARNING_MODEL.name());
         this.radioGroupInteligencia.setValue(InteligenciaCPU.DECISSION_TREE_HEURISTIC.name());
 
         monitor.add(this.radioGroupBando, this.radioGroupInteligencia, this.lastMovement);

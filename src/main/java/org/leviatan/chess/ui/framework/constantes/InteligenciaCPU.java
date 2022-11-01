@@ -12,7 +12,10 @@ public enum InteligenciaCPU {
     DECISSION_TREE_HEURISTIC,
 
     /** DEEP_LEARNING_MODEL. */
-    DEEP_LEARNING_MODEL;
+    DEEP_LEARNING_MODEL,
+
+    /** REINFORCEMENT_LEARNING_MODEL. */
+    REINFORCEMENT_LEARNING_MODEL;
 
     /**
      * Devuelve la InteligenciaCPU por el nombre.

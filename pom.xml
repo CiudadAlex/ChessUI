@@ -39,6 +39,11 @@
 			<artifactId>ChessCoreDeepLearning</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>org.leviatan.chess</groupId>
+			<artifactId>ChessCoreReinforcementLearning</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 		<dependency>
 			<groupId>com.vaadin</groupId>

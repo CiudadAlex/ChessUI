@@ -2,7 +2,6 @@ package org.leviatan.chess.ui.app;
 
 import java.util.Iterator;
 import java.util.List;
-import java.util.function.Function;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
@@ -11,14 +10,10 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
-import org.leviatan.chess.board.Casilla;
-import org.leviatan.chess.board.Ficha;
 import org.leviatan.chess.board.Movimiento;
 import org.leviatan.chess.board.Tablero;
-import org.leviatan.chess.board.TipoCasilla;
 import org.leviatan.chess.data.pgn.PGNReaderManager;
 import org.leviatan.chess.data.pgn.Partida;
-import org.leviatan.chess.ui.framework.utils.StyleUtils;
 
 
 /**

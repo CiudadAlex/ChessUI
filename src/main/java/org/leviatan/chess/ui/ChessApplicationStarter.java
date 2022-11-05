@@ -12,5 +12,4 @@ public class ChessApplicationStarter {
     }
 }
 
-// FIXME - - - - probar reinforcement learning con solo 2 pasos
 
